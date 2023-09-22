@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gamepad Type Test</title>
+    <link rel="stylesheet" type="text/css" href="gpcon.css">
+    <script type="text/javascript" src="gamepads.js"></script>
+    <script type="text/javascript" src="libhtml.js"></script>
+    <script type="text/javascript" src="libgp.js"></script>
+    <script type="text/javascript" src="gpcon.js"></script>
+</head>
+<body>
+    Version: 0.1-beta
+    <div id="sol" class="nodisp">Gamepads don't appear to be supported
+    on this browser.  Bummer.</div>
+
+    <div id="prompt" class="nodisp"> press any gamepad button to activate the Controller Typing Test.</div>
+
+    <div id="main" class="nodisp">
+        <div id="button-bar">
+            <span class="button-bar-title">Gamepad: </span>
+            <span id="button-bar-box"></span>
+        </div>
+        <hr>
+        <div id="gamepad-container">
+        </div>
+    </div>
+
+    <!-- Templates are copied for use when needed -->
+    <div id="templates">
+        <input id="template-button" type="button" class="selector-button">
+
+        <div id="template-gamepad" class="gamepad nodisp">
+            <div class="gamepad-title"></div>
+            (<div class="gamepad-mapping"></div>)
+            <div class="gamepad-id"></div>
+            <div class="gamepad-controls-center">
+                <div class="gamepad-controls">
+                    <div class="gamepad-buttons-box"></div>
+                    <div class="gamepad-axes-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="template-gamepad-button-container" class="gamepad-button-container">
+            <div class="gamepad-button"></div>
+            <div class="gamepad-button-label"></div>
+        </div>
+    </div>
+
+    </div>
+    <div id="gamepad-ready-button-container"  class="gamepad-button-ready-container">
+        <div class="gamepad-ready-button"></div>
+    </div>
+    <label for="timelogs">Time</label>
+    <br>
+    <div id="gamepad-time-text" contenteditable class="gamepad-text-time"></div>
+    <label for="resultlogs">result</label>
+    <br>
+    <div id="gamepad-result-text" contenteditable class="gamepad-text-result"></div>
+    <p>Notes:</p>
+    <p><strong>- to reset test manually use left front and back bumper or right bumper</strong></p>
+    <p>- only supports 1 plugged in gamepad </p>
+    <p>- only tested on chrome browser </p>
+    <p>- tested on exbox and gamepad controller </p>
+    <p>- must use DS4windows for playstation or other controllers </p>
+    <br>
+    <p>Test color code: (use logs if color blind)</p>
+    <p style="color:grey">- grey:disconnected state</p>
+    <p style="color: yellow">- yellow:test in-progress state</p>
+    <p style="color:green">- green:test success</p>
+    <p style="color:red">- red:test failed</p>
+</body>
+</html>

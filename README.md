@@ -1,4 +1,6 @@
-# gamepadgame
+# Gamepadgame
 pressing sequence of buttons and measure the time
-hosted here: lagamepad.gametoms.com
+## hosted in AWS as static content: 
+https://lagamepad.gametoms.com
+### Notes: 
 Must have gamepad connected to try it out
